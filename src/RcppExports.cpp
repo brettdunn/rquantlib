@@ -1350,6 +1350,21 @@ RcppExport SEXP RQuantLib_americanOptionImpliedVolatilityEngine(SEXP typeSEXP, S
     UNPROTECT(1);
     return __result;
 }
+// timesThree
+double timesThree(double x);
+RcppExport SEXP RQuantLib_timesThree(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< double >::type x(xSEXP );
+        double __result = timesThree(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // CreateSchedule
 Rcpp::DateVector CreateSchedule(Rcpp::List params);
 static SEXP RQuantLib_CreateSchedule_try(SEXP paramsSEXP) {

@@ -173,6 +173,10 @@ americanOptionImpliedVolatilityEngine <- function(type, value, underlying, strik
     .Call('RQuantLib_americanOptionImpliedVolatilityEngine', PACKAGE = 'RQuantLib', type, value, underlying, strike, dividendYield, riskFreeRate, maturity, volguess, timesteps, gridpoints)
 }
 
+timesThree <- function(x) {
+    .Call('RQuantLib_timesThree', PACKAGE = 'RQuantLib', x)
+}
+
 CreateSchedule <- function(params) {
     .Call('RQuantLib_CreateSchedule', PACKAGE = 'RQuantLib', params)
 }
